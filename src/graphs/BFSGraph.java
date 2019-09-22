@@ -22,15 +22,19 @@ public class BFSGraph {
 	      
 	*/
 	
+	
+	//Map to store all vertices/nodes and their edge vertices/nodes
 	private static Map<Vertex, List<Vertex>> map = new HashMap<>();
 	
 	public static void main(String[] args) {
 		
+		//Initialize vertices
 		Vertex one = new Vertex(1);
 		Vertex two = new Vertex(2);
 		Vertex three = new Vertex(3);
 		Vertex zero = new Vertex(0);
 		
+		//Add edge nodes to map
 		List<Vertex> edgesZero = new ArrayList<Vertex>();
 		edgesZero.add(one);
 		addEdge(zero, edgesZero);
