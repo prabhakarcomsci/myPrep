@@ -1,0 +1,15 @@
+#BSF graph algorithm
+
+bfs(vertex)
+
+	Queue queue
+	vertex set visited true
+	queue.enqueue(vertex)
+	
+	while queue not empty
+		actual = queue.dequeue
+		
+		for v in actual neighbours
+			if v is not visited
+				v set visited true
+				queue.enqueue(v)
