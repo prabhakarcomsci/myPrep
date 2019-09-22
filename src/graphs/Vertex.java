@@ -1,10 +1,13 @@
 package graphs;
 
+import java.util.List;
+
 public class Vertex{
 	
 	private int data;
-	boolean isVisited;
-	
+	private boolean isVisited;
+	private List<Vertex> edgeNodes;
+
 	public Vertex(int data) {
 		this.data = data;
 		isVisited = false;
@@ -28,6 +31,14 @@ public class Vertex{
 	
 	public String toString() {
 		return "Vertex: " + this.data;
+	}
+	
+	public List<Vertex> getEdgeNodes() {
+		return edgeNodes;
+	}
+
+	public void setEdgeNodes(List<Vertex> edgeNodes) {
+		this.edgeNodes = edgeNodes;
 	}
 	
 	public boolean equals(Object obj) {
