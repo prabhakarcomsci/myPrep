@@ -7,6 +7,7 @@ public class Vertex{
 	private int data;
 	private boolean isVisited;
 	private List<Vertex> edgeNodes;
+	private int deapthLevel = 0;
 
 	public Vertex(int data) {
 		this.data = data;
@@ -59,6 +60,14 @@ public class Vertex{
 	
 	public int hashCode() {
 		return this.getData() * 27;
+	}
+
+	public int getDeapthLevel() {
+		return deapthLevel;
+	}
+
+	public void setDeapthLevel(int deapthLevel) {
+		this.deapthLevel = deapthLevel;
 	}
 }
 

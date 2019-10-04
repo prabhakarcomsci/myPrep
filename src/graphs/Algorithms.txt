@@ -1,0 +1,43 @@
+#BSF graph algorithm
+
+bfs(vertex)
+
+	Queue queue
+	vertex set visited true
+	queue.enqueue(vertex)
+	
+	while queue not empty
+		actual = queue.dequeue
+		
+		for v in actual neighbours
+			if v is not visited
+				v set visited true
+				queue.enqueue(v)
+				
+
+#DSF graph algorith
+# iterative
+dfs(vertex)
+
+	Stack stack
+	vertex set visited true
+	stack.push(vertex)
+	
+	while stack is not empty
+		actual = stack.pop
+		
+		for v in actual neighbours
+			if v is not visited
+				v set visited true
+				stack.push(v)
+				
+# recursion
+
+dfs(vertex)
+
+	vertex set visited true
+	print vertex
+	
+	for v in vertex neighbours
+		if v is not visited
+			dfs(v)
